@@ -16,8 +16,8 @@ function getProgressPercentage(currentTime, totalDuration) {
 
 
 async function getSongs(address) {
-    // const res = await fetch('/Spotify_clone/playlist.json');
-    const res = await fetch('/playlist.json');
+    const res = await fetch('/Spotify_clone/playlist.json');
+    // const res = await fetch('/playlist.json');
    
     const playlists = await res.json();
 
@@ -86,8 +86,8 @@ async function getSongs(address) {
 }
 
 async function displayPlaylists() {
-    // const res = await fetch('/Spotify_clone/playlist.json'); // adjust path as needed
-    const res = await fetch('/playlist.json');
+    const res = await fetch('/Spotify_clone/playlist.json'); // adjust path as needed
+    // const res = await fetch('/playlist.json');
     const playlists = await res.json();
 
     const container = document.querySelector(".cardcontainer");
