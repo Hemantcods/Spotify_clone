@@ -110,7 +110,7 @@ async function displayPlaylists() {
         `;
     }
     // Attach event listeners to each card
-    Array.from(document.getElementsByClassName("list")).forEach(e => {
+    Array.from(document.getElementsByClassName(".list")).forEach(e => {
         e.addEventListener("click", async item => {
             // console.log(item.target.getAttribute("data-folder")); // item.target might be an inner element
             console.log("here",e.getAttribute("data-folder").replaceAll("%20", " ")); // Use e (the card element) to get the attribute
