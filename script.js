@@ -42,13 +42,15 @@ async function getSongs(address) {
     return songs;
 }
 
-const playMusic= (track,pause=false)=>{
+    const playMusic= async (track,pause=false) =>{
     // let audio=new Audio("/songs/"+track)
     console.log("playing",track);
     if(!pause){
         currentSong.play()
     }
-    currentSong.src=`/${currfolder}/`+track;
+    console.log(`https://hemantcods.github.io/Spotify_clone/${currfolder}/`+track)
+    currentSong.src=`https://hemantcods.github.io/Spotify_clone/${currfolder}/`+track;
+    currentSong.load();
     currentSong.play();
     document.querySelector(".songinfo").innerHTML=decodeURI(track).split(".mp3")[0]
     document.querySelector(".songtime").innerHTML="00:00"
