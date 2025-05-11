@@ -230,6 +230,13 @@ async function main(){
 
     })
     displayPlaylists();
+
+    // add event listner to play by getting the song name from h2
+    document.querySelector(".song").addEventListener("click",e=>{
+        console.log(e.target.getElementsByTagName("h2")[0].innerHTML);
+        playMusic(e.target.getElementsByTagName("h2")[0].innerHTML.replaceAll(" ", "%20") + ".mp3");
+        play.src = "img/play.svg";
+    })
 }
 
 main();
