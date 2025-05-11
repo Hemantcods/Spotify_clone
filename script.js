@@ -99,7 +99,7 @@ async function displayPlaylists() {
         const folder = pl.adress.replace(/\\/g, '/').split('/').pop(); // last folder name
 
         container.innerHTML += `
-            <div data-folder="${folder}" class="card">
+            <div data-folder="${folder}" class="card list">
                 <div class="play" id="play${i}">
                     <img class="play-button" src="pause.svg" alt="">
                 </div>
@@ -110,7 +110,7 @@ async function displayPlaylists() {
         `;
     }
     // Attach event listeners to each card
-    Array.from(document.getElementsByClassName("card")).forEach(e => {
+    Array.from(document.getElementsByClassName("list")).forEach(e => {
         e.addEventListener("click", async item => {
             // console.log(item.target.getAttribute("data-folder")); // item.target might be an inner element
             console.log("here",e.getAttribute("data-folder").replaceAll("%20", " ")); // Use e (the card element) to get the attribute
