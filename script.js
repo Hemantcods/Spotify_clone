@@ -64,7 +64,7 @@ async function getSongs(address) {
         li.addEventListener("click", element => {
             console.log(li.querySelector(".info").firstElementChild.innerHTML);
             playMusic(li.querySelector(".info").firstElementChild.innerHTML.replaceAll(" ", "%20") + ".mp3");
-            play.src = "img/play.svg";
+            play.src = "play.svg";
         })
 
     })
@@ -235,7 +235,7 @@ async function main(){
     document.querySelector(".song").addEventListener("click",e=>{
         console.log(e.target.getElementsByTagName("h2")[0].innerHTML);
         playMusic(e.target.getElementsByTagName("h2")[0].innerHTML.replaceAll(" ", "%20") + ".mp3");
-        play.src = "img/play.svg";
+        play.src = "play.svg";
     })
 }
 
