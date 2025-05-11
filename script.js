@@ -59,7 +59,7 @@ async function main(){
     currfolder=folder;
     console.log(songs);
     // playMusic(songs[0].split("/").pop().replaceAll("%20"," ").split(".")[0],true)
-    let audio=new Audio(songs[4].replaceAll(" ","%20")); 
+    let audio=new Audio("https://hemantcods.github.io/Spotify_clone/"+songs[4]); 
     audio.addEventListener("loadeddata", () => {
     let duration = audio.duration;
     console.log("duration",duration,"seconds"," current duration",audio.currentTime,"seconds");
