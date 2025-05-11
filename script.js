@@ -15,18 +15,27 @@ function getProgressPercentage(currentTime, totalDuration) {
 }
 
 
-async function getSongs(folder){
-    response=await fetch('/playlist.json');
-    console.log(response);
-    let length=playlist.length; 
-    let songs=[];
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")){
-            songs.push(element.href); 
-        }
-    } 
-    return songs;  
+async function getSongs(address) {
+    const res = await fetch('/playlist.json');
+    const playlists = await res.json();
+
+    const cleanAddress = address.replace(/\\/g, '/');
+    const playlist = playlists.find(pl => pl.adress.replace(/\\/g, '/') === cleanAddress);
+
+    if (!playlist) {
+        console.warn(`Playlist not found for address: ${address}`);
+        return [];
+    }
+
+    const baseUrl = '/' + cleanAddress + '/';
+    const songs = [];
+
+    for (let i = 0; i < playlist.songs.length; i++) {
+        const songFile = playlist.songs[i];
+        songs.push(baseUrl + encodeURIComponent(songFile));
+    }
+    console.log("songs",songs);
+    return songs;
 }
 
 const playMusic= (track,pause=false)=>{
@@ -40,8 +49,8 @@ const playMusic= (track,pause=false)=>{
     document.querySelector(".songtime").innerHTML="00:00"
 }
 async function main(){
-    let songs=await getSongs('songs/phonk')
-    folder="songs/phonk";
+    let songs=await getSongs('songs/ncs')
+    folder="songs/ncs";
     currfolder=folder;
     console.log(songs);
     // playMusic(songs[0].split("/").pop().replaceAll("%20"," ").split(".")[0],true)
@@ -57,6 +66,7 @@ async function main(){
     for (const song of songs) {
         // let songname=song.split("/").pop().replaceAll("%20"," ").split(".")[0];
         let songname=decodeURI(song).split("/").pop().replaceAll("%20"," ").split(".")[0];
+        console.log(songname);
         songul.innerHTML=songul.innerHTML+`
                         <li>
                             <div class="small_card">
