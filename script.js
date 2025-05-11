@@ -39,6 +39,35 @@ async function getSongs(address) {
         songs.push(baseUrl + encodeURIComponent(songFile));
     }
     console.log("songs",songs);
+
+    let songul=document.querySelector(".songlist").getElementsByTagName("ul")[0];  // addihng the card to the ul
+    songul.innerHTML="";
+    for (const song of songs) {
+        // let songname=song.split("/").pop().replaceAll("%20"," ").split(".")[0];
+        let songname=decodeURI(song).split("/").pop().replaceAll("%20"," ").split(".")[0];
+        console.log(songname);
+        songul.innerHTML=songul.innerHTML+`
+                        <li>
+                            <div class="small_card">
+                                <img src="music.svg" class="music invert" alt="">
+                                <div class="info">
+                                    <h2>${songname}</h2>
+                                    <p>Hemant</p>
+                                </div>
+                                <img class="small_play" src="pause.svg" alt="">
+                            </div>
+                        </li>
+                        `;
+    }
+    // attach an event listener to each song
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach((li, index) => {
+        li.addEventListener("click", element => {
+            console.log(li.querySelector(".info").firstElementChild.innerHTML);
+            playMusic(li.querySelector(".info").firstElementChild.innerHTML.replaceAll(" ", "%20") + ".mp3");
+            play.src = "img/play.svg";
+        })
+
+    })
     return songs;
 }
 
@@ -80,6 +109,19 @@ async function displayPlaylists() {
             </div>
         `;
     }
+    // Attach event listeners to each card
+    Array.from(document.getElementsByClassName("card")).forEach(e => {
+        e.addEventListener("click", async item => {
+            // console.log(item.target.getAttribute("data-folder")); // item.target might be an inner element
+            console.log("here",e.getAttribute("data-folder").replaceAll("%20", " ")); // Use e (the card element) to get the attribute
+            songs = await getSongs(`songs/${e.getAttribute("data-folder")}`);
+
+            currfolder = `songs/${e.getAttribute("data-folder")}`;
+            folder = `songs/${e.getAttribute("data-folder")}`;
+            currfolder = folder;
+            playMusic(songs[0].split("/").pop(), true);
+        })
+    });
 }
 async function main(){
     let songs=await getSongs('songs/ncs')
@@ -93,35 +135,9 @@ async function main(){
     console.log("duration",duration,"seconds"," current duration",audio.currentTime,"seconds");
     // The duration variable now holds the duration (in seconds) of the audio clip
     });
-       
 
-    let songul=document.querySelector(".songlist").getElementsByTagName("ul")[0];  // addihng the card to the ul
-    for (const song of songs) {
-        // let songname=song.split("/").pop().replaceAll("%20"," ").split(".")[0];
-        let songname=decodeURI(song).split("/").pop().replaceAll("%20"," ").split(".")[0];
-        console.log(songname);
-        songul.innerHTML=songul.innerHTML+`
-                        <li>
-                            <div class="small_card">
-                                <img src="music.svg" class="music invert" alt="">
-                                <div class="info">
-                                    <h2>${songname}</h2>
-                                    <p>Hemant</p>
-                                </div>
-                                <img class="small_play" src="pause.svg" alt="">
-                            </div>
-                        </li>
-                        `;
-    }
-    // attach an event listener to each song
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach((li,index)=>{
-        li.addEventListener("click",element=>{
-            console.log(li.querySelector(".info").firstElementChild.innerHTML);
-            playMusic(li.querySelector(".info").firstElementChild.innerHTML.replaceAll(" ","%20")+".mp3");
-            play.src="play.svg";
-        })
-       
-    })
+    
+
 
     // button=document.getElementById("play1");
     // button.addEventListener("click",function(){
