@@ -15,7 +15,7 @@ function getProgressPercentage(currentTime, totalDuration) {
 
 
 async function getSongs(folder){
-    let a=await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a=await fetch(`songs/${folder}/`);
     let response=await a.text();
     let div=document.createElement("div");
     div.innerHTML=response;
