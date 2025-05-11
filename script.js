@@ -17,6 +17,7 @@ function getProgressPercentage(currentTime, totalDuration) {
 async function getSongs(folder){
     let a=await fetch(`https://hemantcods.github.io/Spotify_clone/songs/${folder}/`);
     let response=await a.text();
+    console.log(response);
     let div=document.createElement("div");
     div.innerHTML=response;
     let as=div.getElementsByTagName("a");
