@@ -2,6 +2,7 @@ console.log("lets wite java script");
 let currentSong=new Audio();
 let started=false; 
 let currfolder
+let user="hemantcods"
 function formatTime(seconds) {
     const totalSeconds = Math.floor(seconds);
     const mins = Math.floor(totalSeconds / 60);
@@ -15,12 +16,9 @@ function getProgressPercentage(currentTime, totalDuration) {
 
 
 async function getSongs(folder){
-    let a=await fetch(`/songs/${folder}/`);
-    let response=await a.text();
+    response=await fetch('/playlist.json');
     console.log(response);
-    let div=document.createElement("div");
-    div.innerHTML=response;
-    let as=div.getElementsByTagName("a");
+    let length=playlist.length; 
     let songs=[];
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
