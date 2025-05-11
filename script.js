@@ -16,8 +16,10 @@ function getProgressPercentage(currentTime, totalDuration) {
 
 
 async function getSongs(address) {
-    const res = await fetch(`https://${user}.github.io/Spotify_clone/playlist.json`);
+    const res = await fetch(`/playlist.json`);
+   
     const playlists = await res.json();
+     console.log(playlists);
 
     const cleanAddress = address.replace(/\\/g, '/');
     const playlist = playlists.find(pl => pl.adress.replace(/\\/g, '/') === cleanAddress);
