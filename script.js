@@ -78,7 +78,7 @@ async function getSongs(address) {
         currentSong.play()
     }
     console.log(`https://hemantcods.github.io/Spotify_clone/${currfolder}/`+track)
-    currentSong.src=`https://hemantcods.github.io/Spotify_clone/${currfolder}/`+track;
+    currentSong.src=`https://hemantcods.github.io/Spotify_clone/${currfolder.replaceAll(" ","%20")}/`+track;
     currentSong.load();
     currentSong.play();
     document.querySelector(".songinfo").innerHTML=decodeURI(track).split(".mp3")[0]
