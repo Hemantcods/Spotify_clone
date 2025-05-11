@@ -1,7 +1,7 @@
 [
   {
     "name": "Beast Mode Phonk",
-    "adress":`\songs\beast mode phonk`,
+    "adress":"songs\\beast mode phonk",
     "description": "A high-energy phonk track with heavy bass and aggressive beats.",
     "cover_adress": "https://lh3.googleusercontent.com/byABjDlTWtwPXTXby1kwVUSlVfECACIOtKoKBn60xG8QIBDHbIzvdwMzZq2ayQuuGdSEiu3kNVlbRN0=w544-h544-l90-rj",
     "songs": [
@@ -11,13 +11,29 @@
   },
   {
     "name": "NCS - NoCopyrightSounds",
-    "adress":`\songs\ncs`,
+    "adress":"songs\\ncs",
     "description": "NoCopyrightSounds (NCS) is a record label that releases free music for creators. The label was founded in 2011 by Billy Woodford and has since gained a large following on platforms like YouTube and SoundCloud. NCS focuses on electronic music, including genres like dubstep, house, and drum and bass. The label's mission is to provide high-quality, copyright-free music for content creators, allowing them to use the tracks in their videos without worrying about copyright issues.",
     "cover_adress": "https://lh3.googleusercontent.com/qYRFSrHxOFF5HbU6CfDRDxLFlhw8X6_AGFL9x-ZoAtpmwamsDfLSc8l6TRcmwrJOgnQQg_FuHcrFFhk3=w544-h544-l90-rj",
     "songs": [
-      "song1.mp3",
-      "song2.mp3"
+      "Kanimaa .mp3",
+      "Laal Pari .mp3",
+      "MAUNA LOA.mp3",
+      "Nee Singam Dhan.mp3",
+      "Qatal.mp3",
+      "Supreme.mp3"
     ],
-    "count": 2
+    "count": 6
+  },
+  {
+    "name": "phonk",
+    "adress":"songs\\phonk",
+    "description": "Phonk is a subgenre of hip-hop that originated in the 1990s in the Southern United States. It is characterized by its use of samples from Memphis rap, horror movie soundtracks, and lo-fi production techniques. Phonk often features heavy basslines, distorted vocals, and a dark, atmospheric sound. The genre has gained popularity in recent years, particularly on platforms like TikTok and SoundCloud.",
+    "cover_adress": "https://lh3.googleusercontent.com/RylVEfi0V16DUARgM_c3NKngbujpR4j4F5YoKPaczTjpF4ihrKVTyif2KB8RPR0GXC9QgMczi8GoMZg=w544-h544-l90-rj",
+    "songs":[
+        "ATLXS - PASSO BEM SOLTO (Slowed and EXTENDED).mp3",
+        "MATUSHKA ULTRAFUNK.mp3",
+        "NUNCA MUDA_ (Slowed) .mp3"
+
+    ],"count":  3
   }
 ]
