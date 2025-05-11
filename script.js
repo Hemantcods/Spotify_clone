@@ -55,6 +55,32 @@ async function getSongs(address) {
     document.querySelector(".songinfo").innerHTML=decodeURI(track).split(".mp3")[0]
     document.querySelector(".songtime").innerHTML="00:00"
 }
+
+async function displayPlaylists() {
+    const res = await fetch('/Spotify_clone/playlist.json'); // adjust path as needed
+    // const res = await fetch('/playlist.json');
+    const playlists = await res.json();
+
+    const container = document.querySelector(".cardcontainer");
+    // container.innerHTML = ""; // Clear any existing content
+
+    for (let i = 0; i < playlists.length; i++) {
+        const pl = playlists[i];
+
+        const folder = pl.adress.replace(/\\/g, '/').split('/').pop(); // last folder name
+
+        container.innerHTML += `
+            <div data-folder="${folder}" class="card">
+                <div class="play" id="play${i}">
+                    <img class="play-button" src="img/pause.svg" alt="">
+                </div>
+                <img src="${pl.cover_adress}" alt="">
+                <h2>${pl.name}</h2>
+                <p>${pl.description}</p>
+            </div>
+        `;
+    }
+}
 async function main(){
     let songs=await getSongs('songs/ncs')
     folder="songs/ncs";
@@ -187,6 +213,7 @@ async function main(){
         console.log(e.target.value);
 
     })
+    displayPlaylists();
 }
 
 main();
