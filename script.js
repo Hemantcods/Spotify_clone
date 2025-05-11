@@ -17,6 +17,7 @@ function getProgressPercentage(currentTime, totalDuration) {
 
 async function getSongs(address) {
     const res = await fetch('/Spotify_clone/playlist.json');
+    // const res = await fetch('/playlist.json');
    
     const playlists = await res.json();
 
@@ -43,6 +44,7 @@ async function getSongs(address) {
 
 const playMusic= (track,pause=false)=>{
     // let audio=new Audio("/songs/"+track)
+    console.log("playing",track);
     if(!pause){
         currentSong.play()
     }
@@ -57,7 +59,7 @@ async function main(){
     currfolder=folder;
     console.log(songs);
     // playMusic(songs[0].split("/").pop().replaceAll("%20"," ").split(".")[0],true)
-    let audio=new Audio(songs[4]); 
+    let audio=new Audio(songs[4].replaceAll(" ","%20")); 
     audio.addEventListener("loadeddata", () => {
     let duration = audio.duration;
     console.log("duration",duration,"seconds"," current duration",audio.currentTime,"seconds");
