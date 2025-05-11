@@ -119,7 +119,7 @@ body{
     border-radius: 5px;
     background-color:#1f1f1f;
 }
-.card p{
+.card>p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
