@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Beast Mode Phonk",
+    "adress":`\songs\beast mode phonk`,
+    "description": "A high-energy phonk track with heavy bass and aggressive beats.",
+    "cover_adress": "https://lh3.googleusercontent.com/byABjDlTWtwPXTXby1kwVUSlVfECACIOtKoKBn60xG8QIBDHbIzvdwMzZq2ayQuuGdSEiu3kNVlbRN0=w544-h544-l90-rj",
+    "songs": [
+      "ODNOGO ULTRAFUNK.mp3"
+    ],
+    "count": 1
+  },
+  {
+    "name": "NCS - NoCopyrightSounds",
+    "adress":`\songs\ncs`,
+    "description": "NoCopyrightSounds (NCS) is a record label that releases free music for creators. The label was founded in 2011 by Billy Woodford and has since gained a large following on platforms like YouTube and SoundCloud. NCS focuses on electronic music, including genres like dubstep, house, and drum and bass. The label's mission is to provide high-quality, copyright-free music for content creators, allowing them to use the tracks in their videos without worrying about copyright issues.",
+    "cover_adress": "https://lh3.googleusercontent.com/qYRFSrHxOFF5HbU6CfDRDxLFlhw8X6_AGFL9x-ZoAtpmwamsDfLSc8l6TRcmwrJOgnQQg_FuHcrFFhk3=w544-h544-l90-rj",
+    "songs": [
+      "song1.mp3",
+      "song2.mp3"
+    ],
+    "count": 2
+  }
+]
