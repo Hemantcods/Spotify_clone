@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left border  ">
+            <div class="close">
+                <img src="close.svg" alt="">
+            </div>
+            <div class="home p-1 m1 bg-grey rounded">
+                <div class="logo"><img class="invert" src="logo.svg" alt=""></div>
+                <ul>
+                    <li><img class="invert" src="Home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="Search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+            <div class="library  bg-grey rounded m1 p-1">
+                <img class=" lib-icon invert" src="lib.svg" alt="">
+                Your Library
+                <div class="songlist">
+                    <ul>
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header  bg-grey rounded">
+                <div class="nav invert">
+                    <div class="menu">
+                        <img src="menu.svg" alt="Menu">
+                    </div>
+                    <img src="nav_arrow_left.svg" alt="">
+                    <img src="nav_arrow_right.svg" alt="">
+                </div>
+                <div class="buttons">
+                    <button class="signupbtn">Sign Up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyplaylists">
+                <h1>Spotify Playlists</h1>
+                <div class="cardcontainer">
+                    <div class="card">
+                        <div class="play" id="play1">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02bd7e1592d75a9ad8d211debd" alt="">
+                        <h2>Qatal</h2>
+                        <p>Gill Machhrai</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e026db30265de3e48888ad79aa7" alt="">
+                        <h2>MAUNA LOA</h2>
+                        <p>Vedan</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02caee3f6563eb76d2fa902561" alt="">
+                        <h2>Supreme</h2>
+                        <p>Shubh</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02e7a80f2e7ff3ef311f16a442" alt="">
+                        <h2>Laal Pari (From "Housefull 5")</h2>
+                        <p>Yo Yo Honey Singh</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e0204da3075c8f89b8e5764b9bd" alt="">
+                        <h2>Nee Singam Dhan</h2>
+                        <p>A.R. Rahman</p>
+                    </div>
+                    <div class="card">
+                        <div class="play">
+                            <img class="play-button" src="pause.svg" alt="">
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67616d00001e02116633561ca7705cdbcc9656" alt="">
+                        <h2>Kanimaa (From "Retro")</h2>
+                        <p>A.R. Rahman</p>
+                    </div>
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle">
+
+                        </div>
+                    </div>
+                    <div class="songinfo">
+
+                    </div>
+
+                    <div class="songbuttons">
+                        <img id="previous" class="previousbtn" src="previous.svg" alt="">
+                        <img id="play" class="playbtn" src="pause.svg" alt="">
+                        <img id="next" class="nextbtn" src="next.svg" alt="">
+
+                    </div>
+                    <div class="volandtime">
+                        <div class="songtime">
+
+                        </div>
+                        <div class="volume">
+                            <img src="volume.svg" alt="Volume">
+                            <div class="range">
+                                <input name="volume" type="range" min="0" max="100" value="100" class="volume-range">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
