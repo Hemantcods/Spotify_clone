@@ -35,5 +35,25 @@
         "NUNCA MUDA_ (Slowed) .mp3"
 
     ],"count":  3
+  },
+  {
+    "name": "Aura Phonk",
+    "adress":"songs\\Aura Phonk",
+    "description": " Aura Phonk is a subgenre of phonk music that combines elements of atmospheric and ambient sounds with the traditional phonk style. It often features ethereal melodies, dreamy soundscapes, and a more laid-back vibe compared to the aggressive beats typically found in phonk tracks.",
+    "cover_adress": "https://i.ytimg.com/vi/8jhC9xnJGYU/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAldPMufvT3wI8xtdgg4zOYhbGLZw",
+    "songs": [
+      "SLAVA FUNK!.mp3",
+      "LONOWN - AVANGARD (SLOWED).mp3",
+      "DYGO- FUNK INFERNAL.mp3",
+      "MANASHA - Ashreveal.mp3",
+      "ANDROMEDA - NO FEAR!.mp3",
+      "OGRYZEK - AURA.mp3",
+      "NCTS - NEXT.mp3",
+      "BLUE HORIZON FUNK.mp3",
+      "TRASHXRL - DEUS DO OLIMPO.mp3",
+      "IROKZ - FUNK UNIVERSO.mp3"
+    ],
+    "count": 4
   }
+
 ]
